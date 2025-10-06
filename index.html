@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SwiftResideTech - Software Development Company</title>
+  <meta name="description" content="SwiftResideTech - Future-proof, AI-ready software solutions for MSMEs in Kenya" />
+  <meta name="keywords" content="Kenya software development, MSME software, AI integration, M-Pesa integration, Africastalking, enterprise software" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <style>
+    /* Custom styles for SwiftResideTech */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    .dark-background {
+      background-color: #0d1b2a !important;
+      color: #e0e0e0 !important;
+    }
+
+    header.header {
+      background: #0a1626;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+      transition: background 0.3s ease;
+    }
+
+    header.header .logo span.sitename {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #0dcaf0;
+      letter-spacing: 2px;
+    }
+
+    .btn-get-started {
+      background: #0dcaf0;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 15px rgb(13 202 240 / 0.4);
+    }
+
+    .btn-get-started:hover {
+      background: #0a9bbf;
+      box-shadow: 0 6px 20px rgb(10 155 191 / 0.6);
+      color: #fff;
+    }
+
+    .btn-watch-video {
+      color: #0dcaf0;
+      font-weight: 600;
+      margin-left: 20px;
+      font-size: 1.1rem;
+    }
+
+    .btn-watch-video i {
+      font-size: 1.5rem;
+      margin-right: 8px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .hero {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #0a1626 0%, #0d1b2a 100%);
+      color: #e0e0e0;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .hero-img img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgb(0 0 0 / 0.3);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Portfolio cards */
+    .portfolio-info h4 {
+      font-weight: 600;
+      color: #0dcaf0;
+    }
+
+    .portfolio-info p {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    /* Partners logos */
+    .partner-logo {
+      max-height: 60px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+
+    .partner-logo:hover {
+      filter: none;
+      opacity: 1;
+    }
+
+    /* Contact form */
+    form.php-email-form input,
+    form.php-email-form textarea {
+      border-radius: 8px;
+      border: 1px solid #ced4da;
+      padding: 12px 15px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    form.php-email-form input:focus,
+    form.php-email-form textarea:focus {
+      border-color: #0dcaf0;
+      outline: none;
+      box-shadow: 0 0 8px rgb(13 202 240 / 0.5);
+    }
+
+    form.php-email-form button {
+      background: #0dcaf0;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 15px rgb(13 202 240 / 0.4);
+    }
+
+    form.php-email-form button:hover {
+      background: #0a9bbf;
+      box-shadow: 0 6px 20px rgb(10 155 191 / 0.6);
+    }
+
+    /* Footer */
+    footer.footer {
+      background: #0a1626;
+      color: #e0e0e0;
+      padding: 40px 0;
+    }
+
+    footer.footer a {
+      color: #0dcaf0;
+      text-decoration: none;
+    }
+
+    footer.footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="#hero" class="logo d-flex align-items-center">
+        <!-- <img src="assets/img/logo.png" alt="SwiftResideTech Logo" style="height: 50px; margin-right: 10px" /> -->
+        <span class="sitename">SwiftResideTech</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-in">
+            <h1>Future-Proof Software Solutions for Kenyan MSMEs</h1>
+            <p>
+              At SwiftResideTech, we build cutting-edge, AI-ready enterprise software tailored to empower MSMEs across Kenya.
+              Seamlessly integrated with local payment systems, SMS gateways, and partner platforms.
+            </p>
+            <div class="d-flex">
+              <a href="#contact" class="btn-get-started">Get Started</a>
+            </div>
+          </div>
+          <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/kenya-tech-hero.png" alt="Kenyan Tech Illustration" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <h3>About SwiftResideTech</h3>
+            <p>
+              We are passionate about developing affordable, future-proof software solutions that solve real pain points for Kenyan MSMEs.
+              Our mission is to digitize businesses, seal accounting loopholes, improve efficiency, and enhance customer experience.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-check-circle-fill text-info"></i>
+                <strong>Client-Centric Development:</strong> We build with you, ensuring solutions fit your unique needs.
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-info"></i>
+                <strong>AI Integration Ready:</strong> Future-proof your business with AI-powered automation and insights.
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-info"></i>
+                <strong>Seamless Integrations:</strong> Payments, SMS, and partner platforms integrated for smooth operations.
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/about-kenya.png" class="img-fluid rounded" alt="About SwiftResideTech" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+  Updated Services Section for SwiftResideTech
+  - Larger cards
+  - Bigger, contained icons (no floating)
+  - Improved spacing, hover effects and responsive sizing
+  Paste both the <style> block and the <section> block into your page (place <style> in <head> or above the section).
+-->
+
+<style>
+  /* Services - enhanced card & icon styles */
+  .services .service-item {
+    padding: 2.25rem;                /* increased padding for larger card feel */
+    min-height: 360px;              /* taller cards */
+    border-radius: 1rem;            /* more rounded */
+    transition: transform .25s ease, box-shadow .25s ease;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .services .service-item:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 18px 45px rgba(16,24,40,.12);
+  }
+
+  /* Icon container - fixed size so icon doesn't float */
+  .services .service-item .icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 22px rgba(13, 202, 240, 0.06);
+    background: linear-gradient(135deg, rgba(13,202,240,0.10) 0%, rgba(13,202,240,0.03) 100%);
+    flex-shrink: 0;
+  }
+
+  /* Larger consistent icon size */
+  .services .service-item .icon i {
+    font-size: 2.25rem; /* larger icon */
+    line-height: 1;
+    color: inherit;
+  }
+
+  /* Make colored icons more vibrant while keeping consistent background */
+  .services .service-item .icon .text-primary { color: #0d6efd; }
+  .services .service-item .icon .text-success { color: #198754; }
+  .services .service-item .icon .text-warning { color: #ffc107; }
+  .services .service-item .icon .text-info    { color: #0dcaf0; }
+  .services .service-item .icon .text-danger  { color: #dc3545; }
+  .services .service-item .icon .text-secondary { color: #6c757d; }
+
+  /* Content tweaks */
+  .services .service-item h3 {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .services .service-item p {
+    color: #495057;
+    margin-bottom: 0;
+  }
+
+  /* Responsive reductions for smaller screens */
+  @media (max-width: 767.98px) {
+    .services .service-item {
+      min-height: auto;
+      padding: 1.5rem;
+    }
+    .services .service-item .icon {
+      width: 76px;
+      height: 76px;
+    }
+    .services .service-item .icon i {
+      font-size: 1.75rem;
+    }
+  }
+</style>
+
+<!-- Services Section -->
+<section id="services" class="services section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <p>Empowering MSMEs with tailored software solutions across sectors</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative shadow-sm rounded p-4 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-gear-fill text-primary"></i>
+          </div>
+          <h3>Custom Enterprise Software</h3>
+          <p>From school management to car wash automation, we build end-to-end software with workflows that boost productivity and reduce manual overhead.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative shadow-sm rounded p-4 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-cash-stack text-success"></i>
+          </div>
+          <h3>Payment Integrations</h3>
+          <p>Secure, compliant integrations with Kenyan banks and M-Pesa for seamless collections, reconciliations and automated receipts.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative shadow-sm rounded p-4 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-chat-dots-fill text-warning"></i>
+          </div>
+          <h3>SMS & Communication</h3>
+          <p>Reliable SMS, notifications and multi-channel communication powered by Africastalking and local gateways to keep customers engaged.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative shadow-sm rounded p-4 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-cloud-arrow-up-fill text-info"></i>
+          </div>
+          <h3>AI & Automation Ready</h3>
+          <p>Architectures designed for AI: predictive analytics, automated workflows, and smart assistants that scale with your business.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item position-relative shadow-sm rounded p-4 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-bar-chart-fill text-danger"></i>
+          </div>
+          <h3>Financial Systems</h3>
+          <p>Accounting-grade financial systems that close reconciliation gaps, enforce controls and generate reports for decision making.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item position-relative shadow-sm rounded p-4 h-100">
+          <div class="icon mb-3">
+            <i class="bi bi-people-fill text-secondary"></i>
+          </div>
+          <h3>Sector-Specific Solutions</h3>
+          <p>Tailored software for agriculture, property & facilities, education and more — built with local workflows and compliance in mind.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--
+  Enhanced Portfolio Section for SwiftResideTech
+  - Uses Bootstrap Icons (sector-relevant) instead of images
+  - Icon sits top-centered (overlapping the card) and is sizeable
+  - Clean card layout, centered text, tags & hover effects
+  - Paste the <style> block into your <head> (or above this section) and the <section> block where the Portfolio section should be
+-->
+
+<style>
+  /* Portfolio - icon-first card styles */
+  .portfolio .card {
+    border-radius: 1rem;
+    overflow: visible; /* allow icon to overlap */
+    padding-top: 3.25rem; /* space for overlapping icon */
+    transition: transform .22s ease, box-shadow .22s ease;
+    min-height: 320px;
+  }
+
+  .portfolio .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 50px rgba(13, 24, 40, 0.12);
+  }
+
+  .portfolio .portfolio-icon {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    height: 96px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(13,202,240,0.10) 0%, rgba(13,110,253,0.04) 100%);
+    box-shadow: 0 10px 28px rgba(2,6,23,0.08);
+    border: 1px solid rgba(13,202,240,0.12);
+  }
+
+  .portfolio .portfolio-icon i {
+    font-size: 2.5rem; /* sizeable icon */
+    line-height: 1;
+  }
+
+  /* Slightly different subtle background colors per icon */
+  .portfolio .portfolio-icon.bg-blue    { background: linear-gradient(135deg,#e8faff, #e6f6ff); color: #0dcaf0; }
+  .portfolio .portfolio-icon.bg-green   { background: linear-gradient(135deg,#ecf9f1, #f0fff4); color: #198754; }
+  .portfolio .portfolio-icon.bg-yellow  { background: linear-gradient(135deg,#fff9ec,#fffdf2); color: #ffc107; }
+  .portfolio .portfolio-icon.bg-indigo  { background: linear-gradient(135deg,#eef2ff,#f4f6ff); color: #6610f2; }
+  .portfolio .portfolio-icon.bg-teal    { background: linear-gradient(135deg,#f0fbfb,#f7feff); color: #0dcaf0; }
+  .portfolio .portfolio-icon.bg-red     { background: linear-gradient(135deg,#fff1f1,#fff6f6); color: #dc3545; }
+
+  .portfolio .card-body {
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+
+  .portfolio .card-title {
+    font-weight: 700;
+    color: #0d6efd;
+    margin-top: 0.5rem;
+  }
+
+  .portfolio .card-text {
+    color: #495057;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio .project-tags {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: .25rem;
+  }
+
+  .portfolio .project-tags .badge {
+    font-weight: 600;
+    font-size: 0.78rem;
+    padding: .35rem .6rem;
+    border-radius: 999px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 767.98px) {
+    .portfolio .portfolio-icon {
+      top: -40px;
+      width: 76px;
+      height: 76px;
+      border-radius: 14px;
+    }
+    .portfolio .portfolio-icon i { font-size: 2rem; }
+    .portfolio .card { min-height: auto; padding-top: 2.5rem; }
+  }
+</style>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Showcasing our impactful projects across Kenyan MSMEs</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Project 1 - School Management -->
+      <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm position-relative">
+          <div class="portfolio-icon bg-blue" aria-hidden="true">
+            <i class="bi bi-mortarboard-fill"></i>
+          </div>
+          <div class="card-body">
+            <div class="project-tags mb-2">
+              <span class="badge bg-primary">Education</span>
+              <span class="badge bg-info text-dark">Automation</span>
+            </div>
+            <h5 class="card-title">School Management System</h5>
+            <p class="card-text">
+              End-to-end automation: admissions, attendance, exams, gradebooks, fee collection (M‑Pesa), and parent communications.
+            </p>
+            <a href="#" class="stretched-link" title="School Management details"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 - M-Pesa Payment Integration -->
+      <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm position-relative">
+          <div class="portfolio-icon bg-green" aria-hidden="true">
+            <i class="bi bi-wallet2"></i>
+          </div>
+          <div class="card-body">
+            <div class="project-tags mb-2">
+              <span class="badge bg-success">Payments</span>
+              <span class="badge bg-light text-dark">M‑Pesa</span>
+            </div>
+            <h5 class="card-title">M‑Pesa Payment Integration</h5>
+            <p class="card-text">
+              Secure STK push, B2C, reconciliation, and automated receipts — tailored for Kenyan banks and regulatory needs.
+            </p>
+            <a href="#" class="stretched-link" title="M-Pesa Integration details"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 - Car Wash Management -->
+      <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 shadow-sm position-relative">
+          <div class="portfolio-icon bg-yellow" aria-hidden="true">
+            <i class="bi bi-car-front-fill"></i>
+          </div>
+          <div class="card-body">
+            <div class="project-tags mb-2">
+              <span class="badge bg-warning text-dark">Retail</span>
+              <span class="badge bg-secondary">Workflows</span>
+            </div>
+            <h5 class="card-title">Car Wash Management System</h5>
+            <p class="card-text">
+              Queue & booking management, POS & payments, staff rota, and customer loyalty — built for quick ROI.
+            </p>
+            <a href="#" class="stretched-link" title="Car Wash System details"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 - Property Management -->
+      <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="card h-100 shadow-sm position-relative">
+          <div class="portfolio-icon bg-indigo" aria-hidden="true">
+            <i class="bi bi-building"></i>
+          </div>
+          <div class="card-body">
+            <div class="project-tags mb-2">
+              <span class="badge bg-indigo badge-pill" style="background:#6610f2;color:#fff">Property</span>
+              <span class="badge bg-light text-dark">Tenancy</span>
+            </div>
+            <h5 class="card-title">Property Management System</h5>
+            <p class="card-text">
+              Tenant onboarding, rent collections (automated M‑Pesa), maintenance workflows and owner statements — scalable for portfolios.
+            </p>
+            <a href="#" class="stretched-link" title="Property Management details"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 - Agriculture / Inventory -->
+      <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="500">
+        <div class="card h-100 shadow-sm position-relative">
+          <div class="portfolio-icon bg-teal" aria-hidden="true">
+            <i class="bi bi-tree-fill"></i>
+          </div>
+          <div class="card-body">
+            <div class="project-tags mb-2">
+              <span class="badge bg-success">Agriculture</span>
+              <span class="badge bg-light text-dark">Supply Chain</span>
+            </div>
+            <h5 class="card-title">Farm & Inventory Management</h5>
+            <p class="card-text">
+              Crop & input tracking, inventory, market linkages and buyer invoicing — built with local smallholder workflows in mind.
+            </p>
+            <a href="#" class="stretched-link" title="Agriculture Software details"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 - Financial Management -->
+      <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="600">
+        <div class="card h-100 shadow-sm position-relative">
+          <div class="portfolio-icon bg-red" aria-hidden="true">
+            <i class="bi bi-bar-chart-line-fill"></i>
+          </div>
+          <div class="card-body">
+            <div class="project-tags mb-2">
+              <span class="badge bg-danger">Finance</span>
+              <span class="badge bg-light text-dark">Accounting</span>
+            </div>
+            <h5 class="card-title">Financial Management System</h5>
+            <p class="card-text">
+              Accounting, reconciliation, audit trails and management dashboards to plug financial leaks and improve reporting.
+            </p>
+            <a href="#" class="stretched-link" title="Financial Management details"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="clients section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Partners</h2>
+        <p>Trusted collaborations with leading Kenyan platforms and service providers</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 justify-content-center align-items-center">
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/img/partners/mpesa.png" alt="M-Pesa" class="partner-logo img-fluid" />
+            <p class="mt-2 fw-semibold">M-Pesa</p>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/img/partners/africastalking.png" alt="Africastalking" class="partner-logo img-fluid" />
+            <p class="mt-2 fw-semibold">Africastalking</p>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/img/partners/kenyan-banks.png" alt="Kenyan Banks" class="partner-logo img-fluid" />
+            <p class="mt-2 fw-semibold">Kenyan Banks</p>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/img/partners/deities.png" alt="Deities" class="partner-logo img-fluid" />
+            <p class="mt-2 fw-semibold">Deities</p>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="assets/img/partners/e-times.png" alt="E-Times" class="partner-logo img-fluid" />
+            <p class="mt-2 fw-semibold">E-Times</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <p>Ready to digitize your business? Reach out to SwiftResideTech today!</p>
+      </div>
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0 fs-3 text-primary"></i>
+              <div>
+                <h3>Address</h3>
+                <p>123 Tech Avenue, Nairobi, Kenya</p>
+              </div>
+            </div>
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0 fs-3 text-primary"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+254 700 123 456</p>
+              </div>
+            </div>
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0 fs-3 text-primary"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>contact@swiftresidetech.co.ke</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <form
+              action="https://formsubmit.co/contact@swiftresidetech.co.ke"
+              method="POST"
+              class="php-email-form"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <!-- Netlify or formsubmit.co ready form -->
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html" />
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required />
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading" style="display:none;">Loading</div>
+                  <div class="error-message" style="display:none;"></div>
+                  <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="#hero" class="logo d-flex align-items-center">
+            <span class="sitename">SwiftResideTech</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>123 Tech Avenue</p>
+            <p>Nairobi, Kenya</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 700 123 456</span></p>
+            <p><strong>Email:</strong> <span>contact@swiftresidetech.co.ke</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Expertise</h4>
+          <ul>
+            <li><a href="#services">Enterprise Software</a></li>
+            <li><a href="#services">AI Integration</a></li>
+            <li><a href="#services">Payment Systems</a></li>
+            <li><a href="#services">SMS & Communication</a></li>
+            <li><a href="#services">Automation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Subscribe to Our Newsletter</h4>
+          <p>Get the latest updates on our software solutions and innovations.</p>
+          <form action="https://formsubmit.co/contact@swiftresidetech.co.ke" method="POST" class="php-email-form">
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="newsletter-form d-flex">
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="submit" value="Subscribe" />
+            </div>
+            <div class="loading" style="display:none;">Loading</div>
+            <div class="error-message" style="display:none;"></div>
+            <div class="sent-message" style="display:none;">Subscription successful. Thank you!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SwiftResideTech</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+    ><i class="bi bi-arrow-up-short"></i
+  ></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
